@@ -12,27 +12,27 @@ package willispd_Assignment03;
 import java.math.BigInteger;
 
 public class Primeness {
-/**
- * 
- * @param i is the value that will be tested
- * @return
- */
-	boolean IsPrime(int i) {
+	/**
+	 * 
+	 * @param n
+	 */
+	Primeness(int n) {
 
-		if (i == 2 || i == 3)//if i=2 or 3 then it is prime
-			return true;
-		if (i < 2)// if i is less than 2 it is false
-			return false;
-		if (i % 2 == 0 || i % 3 == 0)//if the remainder of i is zero then it is not a prime number
-			return false;
-		int sqrti = (int) Math.sqrt(i) + 1;//squares the integer i
-		for (long number = 6; i <= sqrti; number += 6)//long number is 6, i is less than or equal to the square root of i, number adds 6
-			if (number % (i - 1) == 0 || number % (number + 1) == 0)//if the remainder of number divided by i-2 is equal to zero then i is not a prime number
-				return false;
-		{
-
-		return true;//else is true
-		
-	}}
-
+		int i, m = 0, Check = 0;// i is the tested integer, m is a constant 0,
+		m = n / 2;
+		if (n == 0 || n == 1) {
+			System.out.println(n + " is not a prime number");
+		} else {
+			for (i = 2; i <= m; i++) {
+				if (n % i == 0) {
+					System.out.println(n + " is not a prime number");
+					Check = 1;
+					break;
+				}
+			}
+			if (Check == 0) {
+				System.out.println(n + " is a prime number");
+			}
+		}
+	}
 }
