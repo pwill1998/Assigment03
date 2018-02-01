@@ -12,7 +12,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		
+		//the following will create a new object called IsPrime
 		Primeness IsPrime = new Primeness(1241241414);
 		Primeness IsPrime1 = new Primeness(38565375);
 		Primeness IsPrime2 = new Primeness(414114);

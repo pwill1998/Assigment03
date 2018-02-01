@@ -18,7 +18,7 @@ public class Primeness {
 	 */
 	Primeness(int n) {
 
-		int integer, m = 0, Check = 0;// i is the tested integer, m is a constant 0,
+		int integer, m = 0, Check = 0;// i is the tested integer, m is a constant 0.
 		m = n / 2;
 		if (n == 0 || n == 1) {//if n is equal to either 0 or 1 it is not a prime number
 			System.out.println(n + " is not a prime number");
