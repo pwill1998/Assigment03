@@ -14,23 +14,23 @@ import java.math.BigInteger;
 public class Primeness {
 	/**
 	 * 
-	 * @param n
+	 * @param n will be given a value in the main class
 	 */
 	Primeness(int n) {
 
-		int i, m = 0, Check = 0;// i is the tested integer, m is a constant 0,
+		int integer, m = 0, Check = 0;// i is the tested integer, m is a constant 0,
 		m = n / 2;
-		if (n == 0 || n == 1) {
+		if (n == 0 || n == 1) {//if n is equal to either 0 or 1 it is not a prime number
 			System.out.println(n + " is not a prime number");
 		} else {
-			for (i = 2; i <= m; i++) {
-				if (n % i == 0) {
+			for (integer = 2; integer <= m; integer++) {//integer=2 , m is 1/n so if m is greater than integer add increment by 1
+				if (n % integer == 0) {//if n is divisible by 2 then it is not a prime number
+					Check = 1;//check 1 is the equivalent to a boolean=false 
 					System.out.println(n + " is not a prime number");
-					Check = 1;
 					break;
 				}
 			}
-			if (Check == 0) {
+			if (Check == 0) {//if check is equal to 0 then n is a prime number
 				System.out.println(n + " is a prime number");
 			}
 		}
